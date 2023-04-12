@@ -1,0 +1,22 @@
+{
+    "files.associations": {
+        "ESTABLE.C": "cpp",
+        "MODEL1.C": "cpp",
+        "GTT_F.C": "cpp",
+        "MODELCHI.C": "cpp",
+        "OPTI_F.C": "cpp",
+        "TESTCHI2.C": "cpp",
+        "GTTVSI.H": "cpp",
+        "MODEL1 copy.C": "cpp",
+        "MODEL1_edit.C": "cpp",
+        "iostream": "cpp",
+        "optind_f.c": "cpp",
+        "xutility": "c",
+        "xstring": "cpp",
+        "string": "cpp",
+        "type_traits": "c",
+        "xmemory": "c",
+        "gttest_f.c": "cpp"
+    },
+    "cmake.configureOnOpen": true
+}
