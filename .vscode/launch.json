@@ -4,26 +4,25 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-    {
-        "name": "C/C++: g++.exe build and debug active file",
-        "type": "cppdbg",
-        "request": "launch",
-        "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
-        "args": ["contr1l.dat", "010121", "365"],
-        "stopAtEntry": false,
-        "cwd": "C:\\Treball UDL\\ProjecteDT-2023\\ProjecteDT-2023\\",
-        "environment": [],
-        "externalConsole": false,
-        "MIMode": "gdb",
-        "miDebuggerPath": "C:\\mingw64\\bin\\gdb.exe",
-        "setupCommands": [
         {
-            "description": "Enable pretty-printing for gdb",
-            "text": "-enable-pretty-printing",
-            "ignoreFailures": true
+            "name": "Launch Program",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/${fileBasenameNoExtension}.out",
+            "args": ["contr1l.dat", "010121", "365"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
         }
-        ],
-        "preLaunchTask": "C/C++: g++.exe build active file"
-    }
     ]
 }
