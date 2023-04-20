@@ -28,18 +28,17 @@ int main(int argc, char *argv[])
         
 
         while (fgets(line, sizeof(line), fp6)) {
-            /* note that fgets don't strip the terminating \n, checking its
-            presence would allow to handle lines longer that sizeof(line) */
-            //count++;
-            //for(int i = 0; i < strlen(line); i++)
-            //{
-            //    current = line[i];
-            //    if(iscntrl(current))
-            //        fprintf(fe, "Sam, we've got a problem in line %d and in character position %d\n", count, i);
-            //}
+            
+            count++;
+            for(int i = 0; i < strlen(line); i++)
+            {
+                current = line[i];
+                if(iscntrl(current))
+                    fprintf(fe, "Sam, we've got a problem in line %d and in character position %d\n", count, i);
+            }
 
 
-            censor_file(line);
+            //censor_file(line);
         }
         
 		fclose(fp6);
@@ -69,7 +68,7 @@ int censor_file(char line[130])
 {
     for(int i = 0; i < strlen(line); i++)
     {
-        if(line[i] != ' ' && line[i] != '\t' && line[i] != '\n'){
+        if(line[i] != ' ' && line[i] != '\t' && line[i] != '\n' && line[i] != '\r' && line[i] != '\0'){
             line[i] = 'X';
         }
     }
