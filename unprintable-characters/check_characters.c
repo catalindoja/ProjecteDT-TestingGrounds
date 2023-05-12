@@ -51,6 +51,10 @@ int main(int argc, char *argv[])
 	return 0;
 }
 
+/**
+ * @brief This function cleans the stdin.
+ * It's a fflush function basically, but for linux.
+ */
 void clean_stdin(void)
 {
     int c;
@@ -59,11 +63,23 @@ void clean_stdin(void)
     } while (c != '\n' && c != EOF);
 }
 
+/**
+ * @brief This function is a mock of the menu.
+ * @param nargs The number of arguments that menu will receive.
+ * @param args The array of arguments that menu will receive.
+ * @return int 
+ */
 int menu(int nargs, char *args[])
 {
     return 1;
 }
 
+/**
+ * @brief This function censors a whole file.
+ * It is mainly used because we don't want to upload sensitive files on github.
+ * @param line The line to censor.
+ * @return int 
+ */
 int censor_file(char line[130])
 {
     for(int i = 0; i < strlen(line); i++)

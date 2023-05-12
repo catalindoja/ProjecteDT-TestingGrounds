@@ -1,0 +1,15 @@
+Doxygen has some issues with outputting C.
+To fix this, some configuration is needed in doxywizzard.
+
+Step by step configuration to get a viable output 
+(some more configuration can be done for sure, but this is the bare minimum).
+
+1. Wizard.
+-   We can mark the scan recursively function if we want to get everything from a folder. 
+    For example a project with 3 folders and each has .C files.
+
+2. Expert
+-   Go to Project -> Mark Optimize_Output_For_C
+-   Go to Build -> Mark Extract_all
+-   Source Browser -> Mark Source_Browser, Inline_Sources, Strip_Code_Comments,
+    References_Link_Source, Source_Tooltips, Verbatim_Headers.
